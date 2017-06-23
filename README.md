@@ -4,7 +4,7 @@ Trabalho escolar
 
 # TODO List
 
-- [x] Tarefa A
+- [ ] Tarefa A
 - [ ] Tarefa B
 - [ ] Tarefa C
 - [ ] Tarefa D
