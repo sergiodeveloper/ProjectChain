@@ -6,7 +6,7 @@ Trabalho escolar
 
 - [ ] Tarefa A
 - [ ] Tarefa B - IN PROGRESS
-- [ ] Tarefa C - IN PROGRESS
+- [X] Tarefa C 
 - [ ] Tarefa D
 - [ ] Tarefa E
 - [ ] Tarefa F
