@@ -1,23 +1,23 @@
 #include <cctype>
-#include "ToReversorConcreteChainElement.hpp"
+#include "ToReverseConcreteChainElement.hpp"
 #include <iostream>
 
-ToReversorConcreteChainElement::ToReversorConcreteChainElement()
+ToReverseConcreteChainElement::ToReverseConcreteChainElement()
    {
    this->setNext(NULL);
    }
 
-ToReversorConcreteChainElement::~ToReversorConcreteChainElement()
+ToReverseConcreteChainElement::~ToReverseConcreteChainElement()
    {
    this->setNext(NULL);
    }
 
-string ToReversorConcreteChainElement::getName()
+string ToReverseConcreteChainElement::getName()
    {
    return (this->name);
    }
 
-void ToReversorConcreteChainElement::internalProcessing(MyDataObject* value)
+void ToReverseConcreteChainElement::internalProcessing(MyDataObject* value)
    {
     string buffer = value->getValue();
     string buffer2 = value->getValue();
