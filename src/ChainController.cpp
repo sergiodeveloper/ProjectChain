@@ -86,6 +86,3 @@ void ChainController::processChain()
    cout << "\nFinal value .....: " << myData->getValue() << endl;
    }
 
-
-
-// Elemento de processamento derivado de AbstractChainElement: um reversor de ordem (ABC -> CBA)
