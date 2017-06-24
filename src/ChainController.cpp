@@ -18,6 +18,7 @@
 #include "ToUpperConcreteChainElement.hpp"
 #include "XorCriptoConcreteChainElement.hpp"
 #include "ToReverseConcreteChainElement.hpp"
+#include "ToCapitalizedConcreteChainElement.hpp"
 
 using namespace std;
 
