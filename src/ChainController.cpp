@@ -17,7 +17,7 @@
 #include "ToLowerConcreteChainElement.hpp"
 #include "ToUpperConcreteChainElement.hpp"
 #include "XorCriptoConcreteChainElement.hpp"
-#include "ToReversorConcreteChainElement.hpp"
+#include "ToReverseConcreteChainElement.hpp"
 
 using namespace std;
 
@@ -63,7 +63,8 @@ void ChainController::createElements()
    // chainUnits.push_back(new XorCriptoConcreteChainElement());
    chainUnits.push_back(new ToUpperConcreteChainElement());
    chainUnits.push_back(new ToLowerConcreteChainElement());
-   chainUnits.push_back(new ToReversorConcreteChainElement());
+   chainUnits.push_back(new ToReverseConcreteChainElement());
+   chainUnits.push_back(new ToCapitalizedConcreteChainElement()); 
    }
 
 void ChainController::prepareChain()
