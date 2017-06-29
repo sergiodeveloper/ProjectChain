@@ -17,6 +17,8 @@
 #include "ToLowerConcreteChainElement.hpp"
 #include "ToUpperConcreteChainElement.hpp"
 #include "XorCriptoConcreteChainElement.hpp"
+#include "ToReverseConcreteChainElement.hpp"
+#include "ToCapitalizedConcreteChainElement.hpp"
 
 using namespace std;
 
@@ -56,12 +58,14 @@ void ChainController::createElements()
    chainUnits.push_back(new ToLowerConcreteChainElement());
    chainUnits.push_back(new ToUpperConcreteChainElement());
    chainUnits.push_back(new ToLowerConcreteChainElement());
-   chainUnits.push_back(new XorCriptoConcreteChainElement());
-   chainUnits.push_back(new XorCriptoConcreteChainElement());
-   chainUnits.push_back(new XorCriptoConcreteChainElement());
-   chainUnits.push_back(new XorCriptoConcreteChainElement());
+   // chainUnits.push_back(new XorCriptoConcreteChainElement());
+   // chainUnits.push_back(new XorCriptoConcreteChainElement());
+   // chainUnits.push_back(new XorCriptoConcreteChainElement());
+   // chainUnits.push_back(new XorCriptoConcreteChainElement());
    chainUnits.push_back(new ToUpperConcreteChainElement());
    chainUnits.push_back(new ToLowerConcreteChainElement());
+   chainUnits.push_back(new ToReverseConcreteChainElement());
+   chainUnits.push_back(new ToCapitalizedConcreteChainElement()); 
    }
 
 void ChainController::prepareChain()
@@ -82,3 +86,4 @@ void ChainController::processChain()
    (chainUnits.at(0))->doProcessing(myData);
    cout << "\nFinal value .....: " << myData->getValue() << endl;
    }
+
