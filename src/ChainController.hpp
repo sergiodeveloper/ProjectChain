@@ -40,9 +40,7 @@ public:
     void prepareChain();
 
     void createElements();
-    
-    int showMenu();
-
+ 
 };
 
 #endif /* CHAINCONTROLLER_HPP */
