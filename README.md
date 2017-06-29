@@ -4,7 +4,7 @@ Trabalho escolar
 
 # TODO List
 
-- [ ] Tarefa A
+- [ ] Tarefa A - IN PROGRESS
 - [X] Tarefa B - PARTIALLY DONE
 - [X] Tarefa C
 - [X] Tarefa D
