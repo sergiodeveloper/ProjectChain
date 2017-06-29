@@ -19,6 +19,9 @@
 
 using namespace std;
 
+/**
+ * Essa classe tem o objetivo de transformar caracteres da string em minusculo 
+ */
 class ToLowerConcreteChainElement : public AbstractChainElement {
 private:
     const string name = "ToLowerConcreteChainElement";

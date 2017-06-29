@@ -19,6 +19,9 @@
 #include "MyDataObject.hpp"
 using namespace std;
 
+/**
+ *	Classe abstrata Chain
+ */
 class AbstractChainElement {
 private:
     AbstractChainElement * nextElement;
@@ -32,6 +35,7 @@ public:
     virtual AbstractChainElement * getNext(void);
     
     virtual void doProcessing(MyDataObject * value);
+    virtual void writeResults(MyDataObject *value);
     virtual string getName(void) = 0;
 };
 

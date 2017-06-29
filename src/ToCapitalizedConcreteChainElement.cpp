@@ -16,6 +16,9 @@ string ToCapitalizedConcreteChainElement::getName()
    return (this->name);
    }
 
+/**
+ *	Transforma a primeira letra de uma string em maiuscula
+ */
 void ToCapitalizedConcreteChainElement::internalProcessing(MyDataObject* value)
    {
    string buffer = value->getValue();

@@ -19,6 +19,9 @@
 
 using namespace std;
 
+/**
+ * Essa classe tem a função de criptografar uma string
+ */
 class XorCriptoConcreteChainElement : public AbstractChainElement {
 private:
     const string name = "XorCriptoConcreteChainElement";
