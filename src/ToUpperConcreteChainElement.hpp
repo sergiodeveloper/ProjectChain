@@ -19,6 +19,9 @@
 
 using namespace std;
 
+/**
+ * Essa classe tem o objetivo de transformar caracteres da string em maiusculo 
+ */
 class ToUpperConcreteChainElement : public AbstractChainElement {
 private:
     const string name = "ToUpperConcreteChainElement";

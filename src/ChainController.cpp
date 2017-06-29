@@ -19,6 +19,7 @@
 #include "XorCriptoConcreteChainElement.hpp"
 #include "ToReverseConcreteChainElement.hpp"
 #include "ToCapitalizedConcreteChainElement.hpp"
+#include "ToCounterConcreteChainElement.hpp"
 #include "TransposeCriptoConcreteChainElement.hpp"
 #include "Menu.h"
 
@@ -30,6 +31,9 @@ ChainController::ChainController()
    myData = NULL;
    }
 
+/**
+ * Metódo que começa a execução do programa
+ */
 void ChainController::start(void){
    vector<string> opcoes({
      "Sair do Sistema",
@@ -77,6 +81,9 @@ void ChainController::start(void){
 }
 
 
+/**
+ * Metodo que carrega a string a ser manipulada pelo sistema
+ */
 void ChainController::loadData(){
   char buffer[1025];
   
@@ -95,7 +102,7 @@ void ChainController::createElements(){
      "XorCriptoConcreteChainElement",
      "ToReverseConcreteChainElement",
      "ToCapitalizedConcreteChainElement",
-     "CharCounterConcreteChainElement",
+     "ToCounterConcreteChainElement",
      "TransposeCriptoConcreteChainElement"
    });
    Menu menu("Escolha um elemento de processamento para adicionar", opcoes);
@@ -121,7 +128,7 @@ void ChainController::createElements(){
        chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToCapitalizedConcreteChainElement()) );
        break;
      case 6:
-       //chainUnits.push_back( unique_ptr<AbstractChainElement>(new CharCounterConcreteChainElement()) );
+       chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToCounterConcreteChainElement()) );
        break;
      case 7:
        chainUnits.push_back( unique_ptr<AbstractChainElement>(new TransposeCriptoConcreteChainElement()) );
@@ -130,6 +137,9 @@ void ChainController::createElements(){
    }
 }
 
+/**
+ * Liga todos os elementos
+ */
 void ChainController::prepareChain()
    {
    if (chainUnits.size() > 1)
@@ -142,6 +152,9 @@ void ChainController::prepareChain()
       }
    }
 
+/**
+ * Método que faz o processamento do chain chamando o metodo doChain
+ */
 void ChainController::processChain()
    {
    cout << "Initial value ...: " << myData->getValue() << endl << endl;

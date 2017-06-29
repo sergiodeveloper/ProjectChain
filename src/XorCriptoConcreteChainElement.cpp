@@ -29,7 +29,9 @@ string XorCriptoConcreteChainElement::getName()
    {
    return (this->name);
    }
-
+/**
+ * Criptografa uma string
+ */
 void XorCriptoConcreteChainElement::internalProcessing(MyDataObject* value)
    {
    int cycle = 0;
@@ -47,12 +49,14 @@ void XorCriptoConcreteChainElement::internalProcessing(MyDataObject* value)
       }
    }
 
+/**
+ *	Acrescenta a criptografia em key
+ */
 void XorCriptoConcreteChainElement::readParameters()
    {
-   char buffer[1025];
-   
+   string buffer;
    cout << "\t\tWhat is the criptografic key? ";
-   cin.getline(buffer, 1024);
-   key = string(buffer);
+   cin >> buffer;
+   key = buffer;
    cout << "\t\tKey ...: [" << key << "] accepted." << endl;
    }
