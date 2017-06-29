@@ -8,7 +8,7 @@ Trabalho escolar
 - [X] Tarefa B - PARTIALLY DONE
 - [X] Tarefa C
 - [X] Tarefa D
-- [ ] Tarefa E
+- [X] Tarefa E
 - [ ] Tarefa F
 - [ ] Tarefa G
 - [ ] Tarefa H
