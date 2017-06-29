@@ -18,12 +18,14 @@
 #include "MyDataObject.hpp"
 #include <vector>
 
+#include <memory>
+
 using namespace std;
 
 class ChainController {
 private:
-    vector<AbstractChainElement *> chainUnits;
-    MyDataObject * myData;
+    vector< unique_ptr<AbstractChainElement> > chainUnits;
+    unique_ptr<MyDataObject> myData;
 public:
     ChainController();
     void start();

@@ -1,3 +1,5 @@
+
+
 #include <cctype>
 #include "ToReverseConcreteChainElement.hpp"
 #include <iostream>
@@ -20,10 +22,11 @@ string ToReverseConcreteChainElement::getName()
 void ToReverseConcreteChainElement::internalProcessing(MyDataObject* value)
    {
     string buffer = value->getValue();
-    string buffer2 = value->getValue();
-    for(int count = 0; count < buffer.size(); count++){
-       buffer.at(count) = (buffer2.at(buffer2.size()-count-1));
-      }
+    for(int count = 0; count < buffer.size() / 2; count++){
+      // Swap chars
+      char aux = buffer.at(count);
+      buffer.at(count) = buffer.at(buffer.size()-1 - count);
+      buffer.at(buffer.size()-1 - count) = aux;
+    }
     value->setValue(buffer);
-   //   std::cout << "Lalala";
    }

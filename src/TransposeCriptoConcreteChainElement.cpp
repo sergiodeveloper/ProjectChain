@@ -27,7 +27,7 @@ void TransposeCriptoConcreteChainElement::internalProcessing(MyDataObject* value
 
 void TransposeCriptoConcreteChainElement::readParameters(){
    int buffer;
-   cout << "\t\tWhat is the criptografic key? ";
+   cout << "\t\tWhat is the criptografic key? (type a number) ";
    cin >> buffer;
    key = buffer;
    cout << "\t\tKey ...: [" << key << "] accepted." << endl;
