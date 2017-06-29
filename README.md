@@ -8,10 +8,10 @@ Trabalho escolar
 - [X] Tarefa C
 - [X] Tarefa D
 - [X] Tarefa E
-- [ ] Tarefa F - IN PROGRESS
-- [ ] Tarefa G
-- [ ] Tarefa H
-- [ ] Tarefa I
+- [X] Tarefa F
+- [X] Tarefa G
+- [X] Tarefa H
+- [X] Tarefa I - Verificar se os comentários estão bons
 - [ ] Tarefa J
 - [ ] Tarefa K
 

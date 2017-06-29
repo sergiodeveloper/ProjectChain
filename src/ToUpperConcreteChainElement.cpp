@@ -29,6 +29,9 @@ string ToUpperConcreteChainElement::getName()
    return (this->name);
    }
 
+/**
+ *	Transforma todos os caracteres de uma string em caracteres maiusculos
+ */
 void ToUpperConcreteChainElement::internalProcessing(MyDataObject* value)
    {
    string buffer = value->getValue();

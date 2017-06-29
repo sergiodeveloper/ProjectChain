@@ -28,11 +28,17 @@ MyDataObject::~MyDataObject()
    this->myDataValue = "";
    }
 
+/**
+ * Altera o valor da variavel da variavel DataValue
+ */
 void MyDataObject::setValue(string newValue)
    {
    this->myDataValue = newValue;
    }
 
+/**
+ * Retorna o valor da variavel de DataValue
+ */
 string MyDataObject::getValue()
    {
    return(myDataValue);

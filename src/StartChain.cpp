@@ -21,6 +21,9 @@ using namespace std;
 
 using namespace std;
 
+/**
+ * Classe que possue o metodo main
+ */
 int main(int argc, char** argv) {
     ChainController * program = new ChainController();
     Info::wellcome();
