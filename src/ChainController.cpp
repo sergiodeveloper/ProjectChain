@@ -20,6 +20,7 @@
 #include "ToReverseConcreteChainElement.hpp"
 #include "ToCapitalizedConcreteChainElement.hpp"
 #include "TransposeCriptoConcreteChainElement.hpp"
+#include "Menu.h"
 
 using namespace std;
 
@@ -29,46 +30,105 @@ ChainController::ChainController()
    myData = NULL;
    }
 
-void ChainController::start(void)
-   {
-   // load the string to be processed
-   loadData();
-   // create the set of processing elements to the chain
-   createElements();
-   // verify if there is at least one element in the chain
-   if (chainUnits.size() > 0)
-      {
-      // prepare the chain, linking the elements
-      prepareChain();
-      // process all elements in the chain
-      processChain();
-      }
-   else
-      {
-      // no elements in the chain
-      cout << "Nothing to do... empty chain!" << endl;
-      };
-   };
+void ChainController::start(void){
+   vector<string> opcoes({
+     "Sair do Sistema",
+     "Definir texto de entrada",
+     "Adicionar elementos de processamento",
+     "Disparar cadeia de processamento"
+   });
+   Menu menu("Menu Principal", opcoes);
+   int escolha = -1;
+   
+   while(escolha){
+     escolha = menu.getEscolha();
+     
+     switch(escolha){
+ 	     case 1:
+         // load the string to be processed
+         loadData();
+         break;
+ 	     case 2:
+         // create the set of processing elements to the chain
+         createElements();
+         break;
+       case 3: {
+         // verify if there is at least one element in the chain
+         if (chainUnits.size() > 0){
+            // prepare the chain, linking the elements
+            prepareChain();
+            
+            // Verify if there is an input string
+            if(myData == NULL){
+              cout << "Missing input string" << endl;
+              loadData();
+            }
+            
+            // process all elements in the chain
+            processChain();
+         }
+         else{
+            // no elements in the chain
+            cout << "Nothing to do... empty chain!" << endl;
+         }
+       }
+     }
+   }
+}
+
 
 void ChainController::loadData(){
-   myData = unique_ptr<MyDataObject>( new MyDataObject(Info::getInstitution()) );
-   }
+  char buffer[1025];
+  
+  cout << "\t\tPlease, type your input string: ";
+  cin.getline(buffer, 1024);
+  string inputString = string(buffer);
+  cout << "\t\tInput String ...: [" << inputString << "] accepted." << endl;
+  myData = unique_ptr<MyDataObject>( new MyDataObject(inputString) );
+}
 
-void ChainController::createElements()
-   {
-   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToLowerConcreteChainElement()) );
-   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToUpperConcreteChainElement()) );
-   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToLowerConcreteChainElement()) );
-   // chainUnits.push_back( unique_ptr<AbstractChainElement>(new XorCriptoConcreteChainElement()) );
-   // chainUnits.push_back( unique_ptr<AbstractChainElement>(new XorCriptoConcreteChainElement()) );
-   // chainUnits.push_back( unique_ptr<AbstractChainElement>(new XorCriptoConcreteChainElement()) );
-   // chainUnits.push_back( unique_ptr<AbstractChainElement>(new XorCriptoConcreteChainElement()) );
-   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToUpperConcreteChainElement()) );
-   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToLowerConcreteChainElement()) );
-   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToReverseConcreteChainElement()) );
-   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToCapitalizedConcreteChainElement()) );
-   //chainUnits.push_back( unique_ptr<AbstractChainElement>(new TransposeCriptoConcreteChainElement()) );
+void ChainController::createElements(){
+   vector<string> opcoes({
+     "Voltar",
+     "ToLowerConcreteChainElement",
+     "ToUpperConcreteChainElement",
+     "XorCriptoConcreteChainElement",
+     "ToReverseConcreteChainElement",
+     "ToCapitalizedConcreteChainElement",
+     "CharCounterConcreteChainElement",
+     "TransposeCriptoConcreteChainElement"
+   });
+   Menu menu("Escolha um elemento de processamento para adicionar", opcoes);
+   int escolha = -1;
+   
+   while(escolha){
+     escolha = menu.getEscolha();
+     
+     switch(escolha){
+	   case 1:
+       chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToLowerConcreteChainElement()) );
+       break;
+	   case 2:
+       chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToUpperConcreteChainElement()) );
+       break;
+     case 3:
+       chainUnits.push_back( unique_ptr<AbstractChainElement>(new XorCriptoConcreteChainElement()) );
+       break;
+     case 4:
+       chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToReverseConcreteChainElement()) );
+       break;
+     case 5:
+       chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToCapitalizedConcreteChainElement()) );
+       break;
+     case 6:
+       //chainUnits.push_back( unique_ptr<AbstractChainElement>(new CharCounterConcreteChainElement()) );
+       break;
+     case 7:
+       chainUnits.push_back( unique_ptr<AbstractChainElement>(new TransposeCriptoConcreteChainElement()) );
+       break;
+     }
    }
+}
 
 void ChainController::prepareChain()
    {
