@@ -1,7 +1,6 @@
 # ProjectChain
 Trabalho escolar
 
-
 # TODO List
 
 - [X] Tarefa A
@@ -16,4 +15,7 @@ Trabalho escolar
 - [ ] Tarefa J
 - [ ] Tarefa K
 
+# Instruções
+
+Trabalhe em sua branch (`git checkout -b nome_da_branch`), quando suas edições estiverem estáveis faça `git merge master` na sua branch antes de fazer um *pull request* para evitar conflitos com a master.
 
