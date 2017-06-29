@@ -8,7 +8,7 @@ Trabalho escolar
 - [X] Tarefa C
 - [X] Tarefa D
 - [X] Tarefa E
-- [ ] Tarefa F
+- [ ] Tarefa F - IN PROGRESS
 - [ ] Tarefa G
 - [ ] Tarefa H
 - [ ] Tarefa I
