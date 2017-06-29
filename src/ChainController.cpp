@@ -19,6 +19,7 @@
 #include "XorCriptoConcreteChainElement.hpp"
 #include "ToReverseConcreteChainElement.hpp"
 #include "ToCapitalizedConcreteChainElement.hpp"
+#include "TransposeCriptoConcreteChainElement.hpp"
 
 using namespace std;
 
@@ -50,22 +51,23 @@ void ChainController::start(void)
    };
 
 void ChainController::loadData(){
-   myData = new MyDataObject(Info::getInstitution());
+   myData = unique_ptr<MyDataObject>( new MyDataObject(Info::getInstitution()) );
    }
 
 void ChainController::createElements()
    {
-   chainUnits.push_back(new ToLowerConcreteChainElement());
-   chainUnits.push_back(new ToUpperConcreteChainElement());
-   chainUnits.push_back(new ToLowerConcreteChainElement());
-   // chainUnits.push_back(new XorCriptoConcreteChainElement());
-   // chainUnits.push_back(new XorCriptoConcreteChainElement());
-   // chainUnits.push_back(new XorCriptoConcreteChainElement());
-   // chainUnits.push_back(new XorCriptoConcreteChainElement());
-   chainUnits.push_back(new ToUpperConcreteChainElement());
-   chainUnits.push_back(new ToLowerConcreteChainElement());
-   chainUnits.push_back(new ToReverseConcreteChainElement());
-   chainUnits.push_back(new ToCapitalizedConcreteChainElement()); 
+   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToLowerConcreteChainElement()) );
+   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToUpperConcreteChainElement()) );
+   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToLowerConcreteChainElement()) );
+   // chainUnits.push_back( unique_ptr<AbstractChainElement>(new XorCriptoConcreteChainElement()) );
+   // chainUnits.push_back( unique_ptr<AbstractChainElement>(new XorCriptoConcreteChainElement()) );
+   // chainUnits.push_back( unique_ptr<AbstractChainElement>(new XorCriptoConcreteChainElement()) );
+   // chainUnits.push_back( unique_ptr<AbstractChainElement>(new XorCriptoConcreteChainElement()) );
+   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToUpperConcreteChainElement()) );
+   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToLowerConcreteChainElement()) );
+   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToReverseConcreteChainElement()) );
+   chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToCapitalizedConcreteChainElement()) );
+   //chainUnits.push_back( unique_ptr<AbstractChainElement>(new TransposeCriptoConcreteChainElement()) );
    }
 
 void ChainController::prepareChain()
@@ -75,7 +77,7 @@ void ChainController::prepareChain()
       // set the chain
       for (int count = 0; count < (chainUnits.size() - 1); count++)
          {
-         (chainUnits.at(count))->setNext(chainUnits.at(count + 1));
+         (chainUnits.at(count))->setNext( chainUnits.at(count + 1).get() );
          }
       }
    }
@@ -83,7 +85,7 @@ void ChainController::prepareChain()
 void ChainController::processChain()
    {
    cout << "Initial value ...: " << myData->getValue() << endl << endl;
-   (chainUnits.at(0))->doProcessing(myData);
+   (chainUnits.at(0))->doProcessing( myData.get() );
    cout << "\nFinal value .....: " << myData->getValue() << endl;
    }
 
