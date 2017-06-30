@@ -11,7 +11,7 @@ Trabalho escolar
 - [X] Tarefa F
 - [X] Tarefa G
 - [X] Tarefa H
-- [X] Tarefa I - Verificar se os comentários estão bons
+- [X] Tarefa I
 - [ ] Tarefa J
 - [ ] Tarefa K
 
