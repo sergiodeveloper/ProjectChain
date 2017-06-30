@@ -88,6 +88,6 @@ void AbstractChainElement::readParameters()
  * Imprimir resultados do processamento
  */
 void AbstractChainElement::writeResults(MyDataObject *value){
-	
+	// Do nothing. May be overrided only if it was necessary.
 }
    

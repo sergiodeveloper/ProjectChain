@@ -19,7 +19,7 @@
 #include "XorCriptoConcreteChainElement.hpp"
 #include "ToReverseConcreteChainElement.hpp"
 #include "ToCapitalizedConcreteChainElement.hpp"
-#include "ToCounterConcreteChainElement.hpp"
+#include "CharCounterConcreteChainElement.hpp"
 #include "TransposeCriptoConcreteChainElement.hpp"
 #include "Menu.h"
 
@@ -105,7 +105,7 @@ void ChainController::createElements(){
      "XorCriptoConcreteChainElement",
      "ToReverseConcreteChainElement",
      "ToCapitalizedConcreteChainElement",
-     "ToCounterConcreteChainElement",
+     "CharCounterConcreteChainElement",
      "TransposeCriptoConcreteChainElement"
    });
    Menu menu("Escolha um elemento de processamento para adicionar", opcoes);
@@ -131,7 +131,7 @@ void ChainController::createElements(){
        chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToCapitalizedConcreteChainElement()) );
        break;
      case 6:
-       chainUnits.push_back( unique_ptr<AbstractChainElement>(new ToCounterConcreteChainElement()) );
+       chainUnits.push_back( unique_ptr<AbstractChainElement>(new CharCounterConcreteChainElement()) );
        break;
      case 7:
        chainUnits.push_back( unique_ptr<AbstractChainElement>(new TransposeCriptoConcreteChainElement()) );

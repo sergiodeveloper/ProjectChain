@@ -1,15 +1,15 @@
 #include <cctype>
 #include <iostream>
-#include "ToCounterConcreteChainElement.hpp"
+#include "CharCounterConcreteChainElement.hpp"
 
 using namespace std;
 
-ToCounterConcreteChainElement::ToCounterConcreteChainElement()
+CharCounterConcreteChainElement::CharCounterConcreteChainElement()
    {
    this->setNext(NULL);
    }
 
-ToCounterConcreteChainElement::~ToCounterConcreteChainElement()
+CharCounterConcreteChainElement::~CharCounterConcreteChainElement()
    {
    this->setNext(NULL);
    }
@@ -17,7 +17,7 @@ ToCounterConcreteChainElement::~ToCounterConcreteChainElement()
 /**
  * Obter nome do elemento de processamento
  */
-string ToCounterConcreteChainElement::getName()
+string CharCounterConcreteChainElement::getName()
    {
    return (this->name);
    }
@@ -25,7 +25,7 @@ string ToCounterConcreteChainElement::getName()
 /**
  * Encontrar a quantidade de caracteres em um dado
  */
-void ToCounterConcreteChainElement::internalProcessing(MyDataObject *value)
+void CharCounterConcreteChainElement::internalProcessing(MyDataObject *value)
    {
 		tamanho = value->getValue().size();
    }
@@ -33,6 +33,6 @@ void ToCounterConcreteChainElement::internalProcessing(MyDataObject *value)
 /**
  * Imprimir quantidade de caracteres encontrada
  */
-void ToCounterConcreteChainElement::writeResults(MyDataObject *value){
+void CharCounterConcreteChainElement::writeResults(MyDataObject *value){
 	cout << "Quantidade de caracteres: " << tamanho << endl;
 }
