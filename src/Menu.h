@@ -14,6 +14,9 @@
 
 using namespace std;
 
+/**
+ * Menu genérico para escolha de uma opção dentre várias
+ */
 class Menu
    {
    private:

@@ -20,7 +20,7 @@
 using namespace std;
 
 /**
- * Essa classe tem o objetivo de transformar caracteres da string em maiusculo 
+ * Essa classe tem o objetivo de deixar todos caracteres de uma string maiúsculos
  */
 class ToUpperConcreteChainElement : public AbstractChainElement {
 private:

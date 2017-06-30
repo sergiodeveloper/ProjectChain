@@ -22,7 +22,8 @@ using namespace std;
 using namespace std;
 
 /**
- * Classe que possue o metodo main
+ * Ponto de entrada do programa, o qual saúda e despede do usuário
+ *  e instancia a classe principal do programa e passa o controle para ela
  */
 int main(int argc, char** argv) {
     ChainController * program = new ChainController();
@@ -33,3 +34,4 @@ int main(int argc, char** argv) {
     Info::goodbye();
     return (0);
 }
+

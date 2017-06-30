@@ -20,7 +20,8 @@
 using namespace std;
 
 /**
- *	Classe abstrata Chain
+ * Classe abstrata com métodos genéricos à todos os elementos de processamento e
+ *  com métodos virtuais puros a serem implementados nas classes derivadas
  */
 class AbstractChainElement {
 private:

@@ -3,9 +3,10 @@
 
 using namespace std;
 
+
 /**
- * Essa classe tem a função de contar quantos caracteres possui a string 
- * 
+ * Classe derivada de AbstractChainElement.
+ * Tem a função de contar e informar quantos caracteres possui a string
  */
 class ToCounterConcreteChainElement : public AbstractChainElement {
 private:

@@ -38,16 +38,25 @@ const string Info::getDate()
    return (date);
    };
 
+/**
+ * Obter nome do sistema
+ */
 const string Info::getSysName()
    {
    return (sysName);
    }
 
+/**
+ * Obter versão do sistema
+ */
 const string Info::getSysVersion()
    {
    return(sysVersion);
    }
 
+/**
+ * Imprimir mensagem de boas vindas
+ */
 const void Info::wellcome()
    {
    cout << decoration;
@@ -58,6 +67,9 @@ const void Info::wellcome()
    cout << decoration << endl;
    };
 
+/**
+ * Imprimir mensagem de despedida
+ */
 const void Info::goodbye()
    {
    cout << decoration;

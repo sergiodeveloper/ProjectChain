@@ -14,24 +14,25 @@ ToCounterConcreteChainElement::~ToCounterConcreteChainElement()
    this->setNext(NULL);
    }
 
+/**
+ * Obter nome do elemento de processamento
+ */
 string ToCounterConcreteChainElement::getName()
    {
    return (this->name);
    }
 
 /**
- *	Retorna a quantidade de caracteres de um MyDataObject
+ * Encontrar a quantidade de caracteres em um dado
  */
 void ToCounterConcreteChainElement::internalProcessing(MyDataObject *value)
    {
-		tamanho = 0;
-		string buffer = value->getValue();
-		for(int i=0; i < buffer.size(); i++){
-			tamanho++;
-		}
-		
+		tamanho = value->getValue.size();
    }
 
+/**
+ * Imprimir quantidade de caracteres encontrada
+ */
 void ToCounterConcreteChainElement::writeResults(MyDataObject *value){
 	cout << "Quantidade de caracteres: " << tamanho << endl;
 }

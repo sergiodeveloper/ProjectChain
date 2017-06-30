@@ -6,6 +6,9 @@
 
 using namespace std;
 
+/**
+ * Classe com a função de transpor os caracteres de uma string dada uma chave
+ */
 class TransposeCriptoConcreteChainElement : public AbstractChainElement {
 private:
     const string name = "TransposeCriptoConcreteChainElement";
