@@ -17,5 +17,5 @@ Trabalho escolar
 
 # Instruções
 
-Trabalhe em sua branch (`git checkout -b nome_da_branch`), quando suas edições estiverem estáveis faça `git merge master` na sua branch antes de fazer um *pull request* para evitar conflitos com a master.
+Trabalhe em sua branch (`git checkout -b nome_da_branch`), quando suas edições estiverem estáveis faça `git merge master` ou `git pull origin master` na sua branch antes de fazer um *pull request* para evitar conflitos com a master, obtendo as novas alterações antes de enviar as suas.
 
