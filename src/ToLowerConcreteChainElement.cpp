@@ -29,6 +29,9 @@ string ToLowerConcreteChainElement::getName()
    return (this->name);
    }
 
+/**
+ * Transformam todos caracteres em minusculo na string
+ */
 void ToLowerConcreteChainElement::internalProcessing(MyDataObject* value)
    {
    string buffer = value->getValue();

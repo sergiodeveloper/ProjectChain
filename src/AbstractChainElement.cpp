@@ -27,15 +27,25 @@ AbstractChainElement::~AbstractChainElement()
    nextElement = NULL;
    }
 
+/**
+ *	Altera o valor do proximo elemento
+ */
 void AbstractChainElement::setNext(AbstractChainElement* next)
    {
    this->nextElement = next;
    }
 
+/**
+ *	Retorna o proximo elemento
+ */
 AbstractChainElement* AbstractChainElement::getNext()
    {
    return(this->nextElement);
    }
+
+/**
+ * Faz o processamento da cadeia
+ */
 
 void AbstractChainElement::doProcessing(MyDataObject* value)
    {
@@ -49,6 +59,8 @@ void AbstractChainElement::doProcessing(MyDataObject* value)
       internalProcessing(value);
       cout << "\t\tTo ....: " << value->getValue() << endl;
       
+      this->writeResults(value);
+      
       if(this->nextElement != NULL)
          {
          nextElement->doProcessing(value);
@@ -60,3 +72,8 @@ void AbstractChainElement::readParameters()
    {
    // do nothing. May be overrided only if it was necessary.
    }
+
+void AbstractChainElement::writeResults(MyDataObject *value){
+	
+}
+   

@@ -19,6 +19,9 @@ string ToReverseConcreteChainElement::getName()
    return (this->name);
    }
 
+/**
+ *	Inverte os caracteres de uma string 
+ */
 void ToReverseConcreteChainElement::internalProcessing(MyDataObject* value)
    {
     string buffer = value->getValue();

@@ -22,6 +22,10 @@
 
 using namespace std;
 
+/**
+ * Classe controller do chain
+ */
+ 
 class ChainController {
 private:
     vector< unique_ptr<AbstractChainElement> > chainUnits;
@@ -36,6 +40,8 @@ public:
     void prepareChain();
 
     void createElements();
+    
+    int showMenu();
 
 };
 

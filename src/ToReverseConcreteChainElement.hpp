@@ -6,6 +6,9 @@
 
 using namespace std;
 
+/**
+ * Essa classe tem a função de inverter os caracteres de uma string
+ */
 class ToReverseConcreteChainElement : public AbstractChainElement {
 private:
     const string name = "ToReverseConcreteChainElement";
