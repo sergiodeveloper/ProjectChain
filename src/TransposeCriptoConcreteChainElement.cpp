@@ -37,9 +37,19 @@ void TransposeCriptoConcreteChainElement::internalProcessing(MyDataObject* value
  * Ler chave a ser usada na transposição
  */
 void TransposeCriptoConcreteChainElement::readParameters(){
-   int buffer;
+   
+   int result;
+   string buffer;
+   
    cout << "\t\tWhat is the criptografic key? (type a number) ";
-   cin >> buffer;
-   key = buffer;
+   getline(cin, buffer);
+   try{
+     result = stoi(buffer);
+   }
+   catch(invalid_argument exception){
+     result = 0;
+   }
+   
+   key = result;
    cout << "\t\tKey ...: [" << key << "] accepted." << endl;
 }
