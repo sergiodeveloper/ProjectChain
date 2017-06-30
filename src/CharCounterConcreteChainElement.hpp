@@ -8,16 +8,16 @@ using namespace std;
  * Classe derivada de AbstractChainElement.
  * Tem a função de contar e informar quantos caracteres possui a string
  */
-class ToCounterConcreteChainElement : public AbstractChainElement {
+class CharCounterConcreteChainElement : public AbstractChainElement {
 private:
     int tamanho;
-    const string name = "ToCounterConcreteChainElement";
+    const string name = "CharCounterConcreteChainElement";
     void internalProcessing(MyDataObject *value) override;
     void writeResults(MyDataObject *value) override; 
 
 public:
-    ToCounterConcreteChainElement();
-    virtual ~ToCounterConcreteChainElement();
+    CharCounterConcreteChainElement();
+    virtual ~CharCounterConcreteChainElement();
     string getName() override;
 };
 
