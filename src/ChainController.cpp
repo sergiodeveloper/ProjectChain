@@ -32,7 +32,7 @@ ChainController::ChainController()
    }
 
 /**
- * Metódo que começa a execução do programa
+ * Metódo que começa a execução do programa e processa instruções do menu principal
  */
 void ChainController::start(void){
    vector<string> opcoes({
@@ -94,6 +94,9 @@ void ChainController::loadData(){
   myData = unique_ptr<MyDataObject>( new MyDataObject(inputString) );
 }
 
+/**
+ * Método que adiciona elementos de processamento (solicitados pelo usuário) ao vetor
+ */
 void ChainController::createElements(){
    vector<string> opcoes({
      "Voltar",
@@ -138,22 +141,22 @@ void ChainController::createElements(){
 }
 
 /**
- * Liga todos os elementos
+ * Encadeia os elementos de processamento na ordem que estão no vector
  */
 void ChainController::prepareChain()
-   {
+{
    if (chainUnits.size() > 1)
-      {
+   {
       // set the chain
       for (int count = 0; count < (chainUnits.size() - 1); count++)
-         {
+      {
          (chainUnits.at(count))->setNext( chainUnits.at(count + 1).get() );
-         }
       }
    }
+}
 
 /**
- * Método que faz o processamento do chain chamando o metodo doChain
+ * Método que faz o processamento do dado usando a cadeia de elementos de processamento
  */
 void ChainController::processChain()
    {

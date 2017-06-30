@@ -14,13 +14,16 @@ ToReverseConcreteChainElement::~ToReverseConcreteChainElement()
    this->setNext(NULL);
    }
 
+/**
+ * Obter nome do elemento de processamento
+ */
 string ToReverseConcreteChainElement::getName()
    {
    return (this->name);
    }
 
 /**
- *	Inverte os caracteres de uma string 
+ * Inverter a ordem dos caracteres de uma string
  */
 void ToReverseConcreteChainElement::internalProcessing(MyDataObject* value)
    {

@@ -6,8 +6,9 @@
 
 using namespace std;
 
+
 /**
- * Essa classe tem a função de inverter os caracteres de uma string
+ * Essa classe tem a função de inverter a ordem dos caracteres de uma string
  */
 class ToReverseConcreteChainElement : public AbstractChainElement {
 private:

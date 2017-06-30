@@ -24,13 +24,16 @@ ToUpperConcreteChainElement::~ToUpperConcreteChainElement()
    this->setNext(NULL);
    }
 
+/**
+ * Obter nome do elemento de processamento
+ */
 string ToUpperConcreteChainElement::getName()
    {
    return (this->name);
    }
 
 /**
- *	Transforma todos os caracteres de uma string em caracteres maiusculos
+ * Deixar todos caracteres da string maiúsculos
  */
 void ToUpperConcreteChainElement::internalProcessing(MyDataObject* value)
    {

@@ -25,12 +25,16 @@ XorCriptoConcreteChainElement::~XorCriptoConcreteChainElement()
    this->setNext(NULL);
    }
 
+/**
+ * Obter nome do elemento de processamento
+ */
 string XorCriptoConcreteChainElement::getName()
    {
    return (this->name);
    }
+
 /**
- * Criptografa uma string
+ * Criptografar/descriptografar o dado usando a operação XOR nos caracteres com uma chave fornecida
  */
 void XorCriptoConcreteChainElement::internalProcessing(MyDataObject* value)
    {
@@ -50,7 +54,7 @@ void XorCriptoConcreteChainElement::internalProcessing(MyDataObject* value)
    }
 
 /**
- *	Acrescenta a criptografia em key
+ * Ler chave para criptografia
  */
 void XorCriptoConcreteChainElement::readParameters()
    {

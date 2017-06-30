@@ -1,5 +1,8 @@
+
+
 #include <cctype>
 #include "ToCapitalizedConcreteChainElement.hpp"
+
 
 ToCapitalizedConcreteChainElement::ToCapitalizedConcreteChainElement()
    {
@@ -11,13 +14,16 @@ ToCapitalizedConcreteChainElement::~ToCapitalizedConcreteChainElement()
    this->setNext(NULL);
    }
 
+/**
+ * Obter nome do elemento de processamento
+ */
 string ToCapitalizedConcreteChainElement::getName()
    {
    return (this->name);
    }
 
 /**
- *	Transforma a primeira letra de uma string em maiuscula
+ * Transforma a primeira letra de cada palavra em maiúscula
  */
 void ToCapitalizedConcreteChainElement::internalProcessing(MyDataObject* value)
    {

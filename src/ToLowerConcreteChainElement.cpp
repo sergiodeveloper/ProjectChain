@@ -24,13 +24,16 @@ ToLowerConcreteChainElement::~ToLowerConcreteChainElement()
    this->setNext(NULL);
    }
 
+/**
+ * Obter nome do elemento de processamento
+ */
 string ToLowerConcreteChainElement::getName()
    {
    return (this->name);
    }
 
 /**
- * Transformam todos caracteres em minusculo na string
+ * Deixar todos caracteres da string minúsculos
  */
 void ToLowerConcreteChainElement::internalProcessing(MyDataObject* value)
    {

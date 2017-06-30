@@ -20,7 +20,7 @@
 using namespace std;
 
 /**
- * Essa classe tem o objetivo de transformar caracteres da string em minusculo 
+ * Esta classe tem a função de deixar todos caracteres de uma string minúsculos
  */
 class ToLowerConcreteChainElement : public AbstractChainElement {
 private:

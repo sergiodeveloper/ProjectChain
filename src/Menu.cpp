@@ -13,12 +13,16 @@
 
 using namespace std;
 
+
 Menu::Menu(string titulo, vector<string> opcoes)
    {
    this->titulo = titulo;
    this->opcoes = opcoes;
    };
    
+/**
+ * Exibir o menu e obter número da opção escolhida pelo usuário
+ */
 const int Menu::getEscolha()
    { 
    int result = -1;
@@ -43,7 +47,12 @@ const int Menu::getEscolha()
       cout << "------------------------------\n" << "Escolha entre 0 e " << (auxiliar - 1) << "\n------------------------------\n";
       buffer = "0";
       getline(cin, buffer);
-      result = stoi(buffer);
+      try{
+        result = stoi(buffer);
+      }
+      catch(invalid_argument exception){
+        result = -1;
+      }
       };
    
    return (result); 

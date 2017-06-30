@@ -20,7 +20,8 @@
 using namespace std;
 
 /**
- * Essa classe tem a função de criptografar uma string
+ * Classe cuja função é criptografar/descriptografar uma string utilizando a 
+ *  operação XOR em seus caracteres com uma dada chave
  */
 class XorCriptoConcreteChainElement : public AbstractChainElement {
 private:

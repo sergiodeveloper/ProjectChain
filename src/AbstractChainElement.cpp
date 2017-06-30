@@ -17,18 +17,24 @@
 
 using namespace std;
 
+/**
+ * Construtor. Inicializar elemento de processamento
+ */
 AbstractChainElement::AbstractChainElement()
    {
    nextElement = NULL;
    }
 
+/**
+ * Destrutor. Limpar referência para o próximo elemento
+ */
 AbstractChainElement::~AbstractChainElement()
    {
    nextElement = NULL;
    }
 
 /**
- *	Altera o valor do proximo elemento
+ * Alterar qual será o próximo elemento da cadeia
  */
 void AbstractChainElement::setNext(AbstractChainElement* next)
    {
@@ -36,7 +42,7 @@ void AbstractChainElement::setNext(AbstractChainElement* next)
    }
 
 /**
- *	Retorna o proximo elemento
+ * Obter qual é o próximo elemento da cadeia
  */
 AbstractChainElement* AbstractChainElement::getNext()
    {
@@ -44,9 +50,11 @@ AbstractChainElement* AbstractChainElement::getNext()
    }
 
 /**
- * Faz o processamento da cadeia
+ * Fazer o processamento do dado fornecido em cadeia (passando o dado processado
+ *  para os próximos elementos de processamento)
+ * 
+ * @param value Valor a ser processado pela cadeia de elementos
  */
-
 void AbstractChainElement::doProcessing(MyDataObject* value)
    {
    if(value != NULL)
@@ -68,11 +76,17 @@ void AbstractChainElement::doProcessing(MyDataObject* value)
       }
    }
 
+/**
+ * Ler parâmetros necessários para o processamento que será feito pelo elemento de processamento
+ */
 void AbstractChainElement::readParameters()
    {
    // do nothing. May be overrided only if it was necessary.
    }
 
+/**
+ * Imprimir resultados do processamento
+ */
 void AbstractChainElement::writeResults(MyDataObject *value){
 	
 }

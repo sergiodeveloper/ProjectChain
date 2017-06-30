@@ -23,9 +23,8 @@
 using namespace std;
 
 /**
- * Classe controller do chain
+ * Classe principal do programa
  */
- 
 class ChainController {
 private:
     vector< unique_ptr<AbstractChainElement> > chainUnits;
@@ -40,7 +39,7 @@ public:
     void prepareChain();
 
     void createElements();
- 
+
 };
 
 #endif /* CHAINCONTROLLER_HPP */

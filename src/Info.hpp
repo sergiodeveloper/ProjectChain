@@ -11,6 +11,9 @@
 
 using namespace std;
 
+/**
+ * Classe para obtenção de informações sobre o sistema e para saudação e despedida do usuário
+ */
 class Info {
 private:
     static const string institution;

@@ -13,23 +13,32 @@
 
 #include "MyDataObject.hpp"
 
+/**
+ * Construtor. Inicializa uma instância de MyDataObject com um valor
+ */
 MyDataObject::MyDataObject(const string newValue)
    {
    this->myDataValue = newValue;
    }
 
+/**
+ * Construtor de cópia
+ */
 MyDataObject::MyDataObject(const MyDataObject& orig)
    {
    this->myDataValue = orig.myDataValue;
    }
 
+/**
+ * Destrutor. Limpa os dados armazenados na instância
+ */
 MyDataObject::~MyDataObject()
    {
    this->myDataValue = "";
    }
 
 /**
- * Altera o valor da variavel da variavel DataValue
+ * Altera o valor armazenado pela instância
  */
 void MyDataObject::setValue(string newValue)
    {
@@ -37,7 +46,7 @@ void MyDataObject::setValue(string newValue)
    }
 
 /**
- * Retorna o valor da variavel de DataValue
+ * Retorna o valor armazenado na instância
  */
 string MyDataObject::getValue()
    {

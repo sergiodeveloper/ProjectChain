@@ -17,6 +17,9 @@
 #include <string>
 using namespace std;
 
+/**
+ * Classe para armazenamento de um dado do tipo std::string
+ */
 class MyDataObject {
 private:
     string myDataValue;
