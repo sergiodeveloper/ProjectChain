@@ -27,7 +27,7 @@ string ToCounterConcreteChainElement::getName()
  */
 void ToCounterConcreteChainElement::internalProcessing(MyDataObject *value)
    {
-		tamanho = value->getValue.size();
+		tamanho = value->getValue().size();
    }
 
 /**
