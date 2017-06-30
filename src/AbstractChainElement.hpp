@@ -28,6 +28,9 @@ private:
     AbstractChainElement * nextElement;
     virtual void internalProcessing(MyDataObject *) = 0;
     virtual void readParameters();
+
+protected:
+    virtual void writeResults(MyDataObject *value);
     
 public:
     AbstractChainElement();
@@ -36,7 +39,6 @@ public:
     virtual AbstractChainElement * getNext(void);
     
     virtual void doProcessing(MyDataObject * value);
-    virtual void writeResults(MyDataObject *value);
     virtual string getName(void) = 0;
 };
 
