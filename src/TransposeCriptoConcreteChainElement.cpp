@@ -43,12 +43,7 @@ void TransposeCriptoConcreteChainElement::readParameters(){
    
    cout << "\t\tWhat is the criptografic key? (type a number) ";
    getline(cin, buffer);
-   try{
-     result = stoi(buffer);
-   }
-   catch(invalid_argument exception){
-     result = 0;
-   }
+   result = stoi(buffer);
    
    key = result;
    cout << "\t\tKey ...: [" << key << "] accepted." << endl;

@@ -47,12 +47,7 @@ const int Menu::getEscolha()
       cout << "------------------------------\n" << "Escolha entre 0 e " << (auxiliar - 1) << "\n------------------------------\n";
       buffer = "0";
       getline(cin, buffer);
-      try{
-        result = stoi(buffer);
-      }
-      catch(invalid_argument exception){
-        result = -1;
-      }
+      result = stoi(buffer);
       };
    
    return (result); 
