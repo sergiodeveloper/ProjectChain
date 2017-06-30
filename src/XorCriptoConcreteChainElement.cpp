@@ -58,9 +58,11 @@ void XorCriptoConcreteChainElement::internalProcessing(MyDataObject* value)
  */
 void XorCriptoConcreteChainElement::readParameters()
    {
-   string buffer;
    cout << "\t\tWhat is the criptografic key? ";
-   cin >> buffer;
+   
+   string buffer;
+   getline(cin, buffer);
+   
    key = buffer;
    cout << "\t\tKey ...: [" << key << "] accepted." << endl;
    }
